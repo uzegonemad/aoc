@@ -38,3 +38,8 @@ function load(string $filename): string {
 
     return trim(file_get_contents($filename));
 }
+
+function loadLines(string $filename): array {
+    $input = load($filename);
+    return explode("\n", $input);
+}
